@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-in.css">
+    <title>Sign in || Sign up from</title>
+     <!-- font awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css stylesheet -->
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a href="index.html"><img src="image/logo.png" alt="error" class="logo"></a>
+            <ul class="navbar-list">
+                <a href="index.html"><li class="navbar-item">Home</li></a>
+                <a href="#"><li class="navbar-item">About Me</li></a>
+                <a href="#"><li class="navbar-item">Project</li></a>
+                <a href="#"><li class="navbar-item">My Skill</li></a>
+                <a href="#"><li class="navbar-item">Contact Us</li></a>
+                <a href="sing-in.html"><li class="navbar-items">Log-in</li></a>
+                <a href="sing-in.html"><li class="navbar-items">Sing-in</li></a>
+            </ul>
+        </nav>
+    </div>
+    <div class="container" id="main">
+        <div class="sign-up">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p>or use your email for registration</p>
+                <input type="text" name="txt" placeholder="Name" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Sing Up</button>
+            </form>
+        </div>
+        <div class="sign-in">
+            <form action="#">
+                <h1>sign-in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <p>or use your account</p>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <a href="#">Forget your Password</a>
+                <button>Sing In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-left">
+                    <h1>Wellcome Back</h1>
+                    <p>To keep connected with us please login your personal info</p>
+                    <button id="signIN">Sing-In</button>
+                </div>
+                <div class="overlay-right">
+                    <h1>Hello, Friend</h1>
+                    <p>Enter your personal details and start journey whit us</p>
+                    <button id="signUp">Sing-Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIN');
+        const main = document.getElementById('main');
+
+        signUpButton.addEventListener('click', () => {
+            console.log('red')
+            main.classList.add("right-panel-active");
+        });
+        signInButton.addEventListener('click', () => {
+            console.log('red')
+            main.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+</html>
